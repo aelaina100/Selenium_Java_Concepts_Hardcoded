@@ -1,0 +1,29 @@
+System.setProperty("webdriver.gecko.driver", "C:\\Program Files\\Third_Party_Browsers\\geckodriver.exe");
+WebDriver driver= new FirefoxDriver();
+=====================================================================================================================	
+System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\Third_Party_Browsers\\chromedriver.exe");
+WebDriver driver= new ChromeDriver();
+======================================================================================================================
+System.setProperty("webdriver.edge.driver", "C:\Program Files\Third_Party_Browsers\\msedgedriver.exe");
+WebDriver driver = new EdgeDriver();
+======================================================================================================================
+However; sometimes new chrome versions along with their compatible 3rd party browsers require an additional step:
+
+changing the above 2nd line into:
+
+System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\Third_Party_Browsers\\chromedriverexe");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");  //--disable-extensions (some other parameter to experiment with in future)
+		WebDriver driver = new ChromeDriver(options); 
+		
+// Note: I have skimmed through solutions where the original 2 lines stay exactly the same but change is
+// done in the selenium dependeny in pom.xml file (Future explarotion)
+=====================================================================================================================	
+	// Both lines above, are for creating a driver for the ENTIRE webpage.
+	 // However; a mini driver can be created as follows:
+	
+}           // WebElement someSection= driver.findElement(By.id("gf-BIG"));
+            // someSection.findElements(By.("")). ....... ;
+=====================================================================================================================
+HTTPS Certifications: 2 types- SSL certification & Insecure certificate   
+A- Design a general chrome profile that accepts certifications  B- Pass this general chrome profile to chrome options.         

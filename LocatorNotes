@@ -1,0 +1,63 @@
+Customized Xpath formula:       //TagName[@attribute= 'value']
+                               //   *    [@attribute= 'value']
+                                     
+  //TagName/../../            (As many as possible as long as there is at least one child)
+                              From //parent tag...... to child to child of the child, etc.
+               						Where also, one can specify the 2nd, or 3rd, etc. instance  (//TagName)[2], etc...
+--------------------------------------------------------------------------------------------------------------------------------
+Customized Css Selector formula:        TagName[attribute= 'value']
+                                               [attribute= 'value']
+                                               
+                                               TagName#id
+                                                      #id
+                                                      
+                                               TagName.className
+                                                      .className
+                                                      
+The equivalent for the xpath above:  //TagName/../../ 
+                               
+is:                            parent_TagName child_TagName (and as many child_TagName as possible with spaces in-between.
+
+Another VERY USEFUL formula for cssSelector:
+ 
+ TagName[attribute= 'value']  TagName[attribute= 'value'] or:
+ [attribute= 'value'] [attribute= 'value']      
+ 
+When the <HTML code> belonging to an element SIMPLY contains an <HTML code> belonging to the target element.
+  
+-----------------------------------------------------------------------------------------------------------------------------                                                     
+Regular Expressions:-
+                     With the requirement of identifying a substring of the value of the attribute that's constant (fixed).
+                     
+                      Xpath:      //TagName[contains(@attribute,'value')]
+                                          *[contains(@attribute,'value')]
+                                          
+                        Css:        TagName[attribute*= 'value']
+                                           [attribute*= 'value']
+                                           
+
+Regular Expressions are used in 2 scenarios:
+
+1- The attribute's value keeps on partially changing [With a substring that's constant (fixed)].
+
+2- The attribure value is too long- for example 20,30,40, or more letters (No point of copying all of that). So,
+just take a substring that you feel doesn't change and is unique, off course.     
+---------------------------------------------------------------------------------------------------------------------------
+Instance Xpaths:- As illustrated in notes:-
+
+(        )[] 
+The CSSSelector equaivalent is:    (     )::nth-child()
+
+Note:  1- Instance Xpath (or its css equivalent) is used for CERTAIN scenarios such as travelling reservation websites,
+          or something similar, where: usually a dynamic dropdown is adjacently located to another one, where usually again
+          all their internal elements are the same (They are a copy of each other) and if this is true, then most of the 
+          time they share EXACTLY he same and only one single code.
+          Where the <HTML code> that's highlighted in blue for #1 and its internal components, is the onr for also #2.
+          There is no dumplicate for that. Its ONLy 1 <HTML  code>
+
+
+       2- For a specific webElement, If the # of instance differs between that of xpath & that of cSS:
+         Then this COULD be due to a hidden element that's identified by the xpath, but not by cSS or vice-versa.
+--------------------------------------------------------------------------------------------
+
+                                       
