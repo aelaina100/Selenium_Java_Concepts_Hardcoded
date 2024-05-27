@@ -1,20 +1,12 @@
 package HardCoded_Examples.Selenium_Concepts_HighLevel;
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.time.Duration;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 
                      //===========================================================
                     // Automate: Is the link titled, "Rest API" brocken or not ?||
                    //            Is its server accessible or not.               ||
                   //============================================================||
 
-public class J1_BrockenLinksDetection {
+public class J1_BrockenLinksDetection {  /*
 	
 	public static void main(String[] args) throws MalformedURLException, IOException {
 		
@@ -44,6 +36,7 @@ public class J1_BrockenLinksDetection {
 		else
 		{
 			System.out.println(" Pass: '"+ restApi_element.getText()+ "' Link is functional as status code is: " + statusCode);
-		}
+		} 
 	}
+ */
 }

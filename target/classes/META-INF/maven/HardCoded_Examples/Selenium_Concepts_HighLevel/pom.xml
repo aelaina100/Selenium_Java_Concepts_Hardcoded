@@ -15,24 +15,27 @@
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
+  
 
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>4.20.0</version>
+    <version>4.21.0</version>
 </dependency>
 
 
+
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
-    <version>7.10.2</version>
+    <version>7.10.1</version>
     <scope>test</scope>
 </dependency>
- 
+
   </dependencies>
 
   <build>

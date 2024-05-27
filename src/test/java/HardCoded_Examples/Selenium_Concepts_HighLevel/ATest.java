@@ -1,15 +1,11 @@
 package HardCoded_Examples.Selenium_Concepts_HighLevel;
 import java.time.Duration;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.interactions.Actions;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -24,7 +20,9 @@ public class ATest {
 	    System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\Third_Party_Browsers\\chromedriver-win64\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*"); 
-		WebDriver driver = new ChromeDriver(options);     
+		WebDriver driver = new ChromeDriver(options);    
+		// removing the 'options' argument and the System.Setproperty() line would still make the script work as the new concept of
+			// Selenium Manager is introduced. Nevertheless, I'd not utilize it.
 		
 	   
 	    driver.manage().window().maximize();
