@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-29T01:36:01 EDT" name="Default suite" finished-at="2024-05-29T01:36:07 EDT" duration-ms="6223">
+    <groups>
+    </groups>
+    <test started-at="2024-05-29T01:36:01 EDT" name="Default test" finished-at="2024-05-29T01:36:07 EDT" duration-ms="6223">
+      <class name="SeleniumExamplesPkg.Selenium_Concepts_Hardcoded.C_SalesForce">
+        <test-method signature="academyTest()[pri:0, instance:SeleniumExamplesPkg.Selenium_Concepts_Hardcoded.C_SalesForce@1cbbffcd]" started-at="2024-05-29T01:36:01 EDT" name="academyTest" finished-at="2024-05-29T01:36:07 EDT" duration-ms="6182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- academyTest -->
+      </class> <!-- SeleniumExamplesPkg.Selenium_Concepts_Hardcoded.C_SalesForce -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
