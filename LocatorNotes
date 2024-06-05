@@ -1,0 +1,134 @@
+==Locators in Selenium are:   ID
+                            ClassName
+                            Name
+                            TagName
+                            Link Text
+                            Partial Link Text
+                            CSS 
+                            Xpath
+
+A priority is in the order of:  ID, then [className or Name or TagName or Link Text, or Partial Link Text], then to Css & finally to Xpath.
+
+Seperate Note: Assume that as <HTML code> has the attribute of:      Class= "submit signInBtn"    (This means that Class attribute has 2 values: "submit"  &  "signInBtn")
+
+<button  class= "submit signInBtn">
+
+Hence, you MUST choose either one of them if you're going to use a ClassName locator. However; using "submit signInBtn" as one value for Class as in:  
+driver.findElement(by.className("submit signInBtn"))       then, a compound class error will be thrown. So, to fix it==> replace all spaceS with a dot using the CSS
+formula of: TagName.class:
+
+driver.findElement(By.cssSelector("button.submit.signInBtn");   or use Xpath formula:  driver.findElement(By.xpath("//button[class= submit signInBtn]");
+
+// Homework: Lecturer used the very above line but with "("button.submitsignInBtn") I suspect that this is a mistake. Double check
+// Homework:  experiemnt with only 'submit' & only 'signInbtn' for ClassName locator PLUS verfiy the rest.
+
+
+CRUCIAL NOTE: A locator has to be UNIQUE. It should NOT be shared by any other element on the webpage EVER EVER EVER. UNLESS you're going to use a TagName that's
+going to deem the final locator (In case of XPath & CSS) unique. That's a crucial point to discern. 
+
+CRUCIAL SEPERATE NOTE:
+
+For:  driver.findElement(By....);
+The controller starts executing from the top left corner and all the way horizontally towards the top right corner, then it moves to the next line where
+              it starts executing from the left corner and all the way horizontally towards the right corner, and so on until it identifies the element where 
+              execution of controller halts.
+              and for the next line of:  driver.findElement(By....);
+              the controller starts fresh by executing from the top left corner and all the way horizontally towards the top right corner, then it moves to the next
+              line where, etc. etc. etc.
+              
+              X------------------->
+              X------------------->
+              X------------------->
+              X------------------->
+              X------------------->
+              
+ALso: let's say a locator turns out to be NOT unique (Shared by other element(s)) then NEVER EVER use it even if it can identfiy the required element where this required
+      element resides on the top of the page and the other element sharing the same locator resides at the buttom of the page. Never use such locator as this is a very
+      bad practice. 
+
+CRUCIAL: Validating the locator in the console tab using $('') for CSS or $X('') for Xpath (The formula kinda changes every now and then)
+         is MANDATORY. This is to validate two things:
+                       1- The locator is UNIQUE (not shared by any other element(s) on the web page)
+                       2- The locator is written correctly with no spelling mistakes.
+                       
+         Nevertheless,  tools such as Chropath or SelectorHub, etc. are 'cool' and encouraged to alternatively achieve the same end result of validating in the console
+                        tab using the $X('') or $$(''). But, keep in mind that some companies restrict their use.
+===========================================================================================================================================================================
+===========================================================================================================================================================================
+
+
+Customized Xpath formula:       //TagName[@attribute= 'value']
+                               //   *    [@attribute= 'value']
+                               
+                               Also:  //TagName
+   
+   Note: the below locator is another way of doing Parent-to-child xpath (Included in the written notes)
+                                     
+  //TagName/../../          (As many as possible as long as there is at least one child)
+                            From //parent tag...... to child to child of the child, etc.
+               				Where also, one can specify the 2nd, or 3rd, etc. instance  (//TagName/....)[2], etc...
+               				
+               				NOTE CRUCIAL: this is the ONLY ONLY type of parent-to-child xpath that does have a CSS equivalent.
+               				
+               		EXCEPT for===> Ex:  //header/div/button[1]   WHERE 'button[1]' portion can't be translated to CSS. So in this case the whole thing falls apart.
+               			The other type of parent-to-child Xpath is the one where you use the customized xpath formula (instead
+               				of TagName) then traversing through the tags.
+--------------------------------------------------------------------------------------------------------------------------------
+Customized Css Selector formula:        TagName[attribute= 'value']
+                                               [attribute= 'value']
+                                               
+                                               TagName#id
+                                                      #id
+                                                      
+                                               TagName.className
+                                                      .className
+                                                      
+                                        Also:  TagName
+                                                      
+The CSS equivalent for the xpath above:  //TagName/../../ 
+                               
+is:                           TagName child_TagName (and as many child_TagName as possible with spaces in-between.
+
+Another VERY USEFUL formula for cssSelector:
+ 
+ TagName[attribute= 'value']  TagName[attribute= 'value'] or:
+ [attribute= 'value'] [attribute= 'value']      
+ 
+When the <HTML code> belonging to an element SIMPLY contains an <HTML code> belonging to the target element.
+  
+-----------------------------------------------------------------------------------------------------------------------------                                                     
+Regular Expressions:-
+                     With the requirement of identifying a substring of the value of the attribute that's constant (fixed).
+                     
+                      Xpath:      //TagName[contains(@attribute,'value')]
+                                          *[contains(@attribute,'value')]
+                                          
+                        Css:        TagName[attribute*= 'value']
+                                           [attribute*= 'value']
+                                           
+
+Regular Expressions are used in 2 scenarios:
+
+1- The attribute's value keeps on partially changing [With a substring that's constant (fixed)].
+
+2- The attribure value is too long- for example 20,30,40, or more letters (No point of copying all of that). So,
+just take a substring that you feel doesn't change and is unique, off course.     
+---------------------------------------------------------------------------------------------------------------------------
+Instance Xpaths:- As illustrated in notes:-
+
+(        )[] 
+The CSSSelector equaivalent is:    (     )::nth-child() 
+
+Note:  1- Instance Xpath (or its css equivalent) is used for VERY CERTAIN SPECIFIC scenarios ONLY such as travelling reservation websites,
+          or something similar, where: usually a dynamic dropdown is adjacently located to another one, where usually again
+          all their internal elements are the same (They are a copy of each other) and if this is true, then most of the 
+          time they share EXACTLY he same and only one single code.
+          Where the <HTML code> that's highlighted in blue for #1 and its internal components, is the one for also #2.
+          There is no duplicate for that. Its ONLy 1 <HTML  code>
+
+
+       2- For a specific webElement, If the # of instance differs between that of xpath & that of cSS:
+         Then this COULD be due to a hidden element that's not identified by the xpath, but identified by CSS or vice-versa. (Very important to know)
+--------------------------------------------------------------------------------------------
+
+                                       
