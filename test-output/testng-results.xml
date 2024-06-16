@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-16T19:01:28 EDT" name="Default suite" finished-at="2024-06-16T19:01:45 EDT" duration-ms="17440">
+    <groups>
+    </groups>
+    <test started-at="2024-06-16T19:01:28 EDT" name="Default test" finished-at="2024-06-16T19:01:45 EDT" duration-ms="17440">
+      <class name="SeleniumExamplesPkg.Selenium_Concepts_Hardcoded.Added_9_checkbox">
+        <test-method signature="check()[pri:0, instance:SeleniumExamplesPkg.Selenium_Concepts_Hardcoded.Added_9_checkbox@27ce24aa]" started-at="2024-06-16T19:01:28 EDT" name="check" finished-at="2024-06-16T19:01:45 EDT" duration-ms="17401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check -->
+      </class> <!-- SeleniumExamplesPkg.Selenium_Concepts_Hardcoded.Added_9_checkbox -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
