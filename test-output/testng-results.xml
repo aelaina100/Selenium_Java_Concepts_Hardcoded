@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-07-08T21:21:49 EDT" name="Default suite" finished-at="2024-07-08T21:23:54 EDT" duration-ms="125257">
+    <groups>
+    </groups>
+    <test started-at="2024-07-08T21:21:49 EDT" name="Default test" finished-at="2024-07-08T21:23:54 EDT" duration-ms="125257">
+      <class name="SeleniumExamplesPkg.Selenium_Concepts_Hardcoded.Added18_Interview_AddingItemsIntoCart_debugMode$Added18_TC2_Interview_AddingItemsIntoCart_debugMode">
+        <test-method signature="added18_AddingItemsIntoCartTest()[pri:0, instance:SeleniumExamplesPkg.Selenium_Concepts_Hardcoded.Added18_Interview_AddingItemsIntoCart_debugMode$Added18_TC2_Interview_AddingItemsIntoCart_debugMode@4310d43]" started-at="2024-07-08T21:21:49 EDT" name="added18_AddingItemsIntoCartTest" finished-at="2024-07-08T21:23:54 EDT" duration-ms="125215" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- added18_AddingItemsIntoCartTest -->
+      </class> <!-- SeleniumExamplesPkg.Selenium_Concepts_Hardcoded.Added18_Interview_AddingItemsIntoCart_debugMode$Added18_TC2_Interview_AddingItemsIntoCart_debugMode -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

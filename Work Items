@@ -1,0 +1,12 @@
+                            ****************************Work Items********************************
+
+- Use a valid real-time synchronization technique in each test case (Explicit wait) ALONG with naming conventions for
+  Class, Method, & Variable.
+
+- Using the correct synchronization techniques of explicit waits are crucial for" added_12.java class file.
+
+- Use soft assertions for Added13_AssignmentTest.java  since its a flow testcase (is that right ?)
+
+- After reviewing JAVA STREAMS, check back on: Added18_TC2_Interview_AddingItemsIntoCart_debugMode (and all methods in this .java class files), to
+  ensure that all methods/testcases are optimized with Java streams.
+
