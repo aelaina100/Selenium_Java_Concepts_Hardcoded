@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-07-15T22:13:36 EDT" name="Default suite" finished-at="2024-07-15T22:13:39 EDT" duration-ms="3021">
+    <groups>
+    </groups>
+    <test started-at="2024-07-15T22:13:36 EDT" name="Default test" finished-at="2024-07-15T22:13:39 EDT" duration-ms="3021">
+      <class name="SeleniumExamplesPkg.Selenium_Concepts_Hardcoded.synchroAssig">
+        <test-method signature="synchroAssigTest()[pri:0, instance:SeleniumExamplesPkg.Selenium_Concepts_Hardcoded.synchroAssig@3d51f06e]" started-at="2024-07-15T22:13:36 EDT" name="synchroAssigTest" finished-at="2024-07-15T22:13:39 EDT" duration-ms="2981" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- synchroAssigTest -->
+      </class> <!-- SeleniumExamplesPkg.Selenium_Concepts_Hardcoded.synchroAssig -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
